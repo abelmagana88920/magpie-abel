@@ -1,3 +1,5 @@
+import { encode } from 'js-base64';
+
 const errorData = (code, detail) => {
   return { errors: [{ code, detail }] };
 };
@@ -20,7 +22,7 @@ const postData = async (url, data, key) => {
     headers: {
       accept: "application/json",
       "content-type": "application/json",
-      authorization: `Basic ${authCode}`
+      authorization: `Basic ${encode(authCode)}`
     },
     body: JSON.stringify(data)
   });

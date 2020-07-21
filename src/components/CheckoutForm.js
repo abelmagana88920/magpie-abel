@@ -123,7 +123,6 @@ const CheckoutForm = ({
                   label="Credit Card Number"
                   onChange={handleFieldChange}
                   value={billingInfo.number}
-                  disabled
                 />
               </Grid>
               <Grid item xs={6}>
