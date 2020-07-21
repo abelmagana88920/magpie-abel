@@ -5,8 +5,8 @@ const errorData = (code, detail) => {
 };
 
 const postData = async (url, data, key) => {
-  const publicKey = process.env.REACT_APP_PAYMONGO_BASE64_PUBLIC_KEY;
-  const secretKey = process.env.REACT_APP_PAYMONGO_BASE64_SECRET_KEY;
+  const publicKey = process.env.REACT_APP_MAGPIE_BASE64_PUBLIC_KEY;
+  const secretKey = process.env.REACT_APP_MAGPIE_BASE64_SECRET_KEY;
   const authCode =
     key === "public" ? publicKey : key === "secret" ? secretKey : null;
 
@@ -20,9 +20,9 @@ const postData = async (url, data, key) => {
   const response = await fetch(url, {
     method: "POST",
     headers: {
-      accept: "application/json",
-      "content-type": "application/json",
-      authorization: `Basic ${encode(authCode)}`
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${encode(authCode + ':')}`
     },
     body: JSON.stringify(data)
   });
