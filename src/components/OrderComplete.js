@@ -85,7 +85,7 @@ const OrderComplete = ({ data, handleConfirm }) => {
               </TableRow>
 
               <TableRow>
-                <TableCell>Paymongo Reference No.</TableCell>
+                <TableCell>Magpie Reference No.</TableCell>
                 <TableCell>{result.id}</TableCell>
               </TableRow>
             </TableBody>
