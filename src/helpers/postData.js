@@ -22,7 +22,7 @@ const postData = async (url, data, key) => {
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
-      Authorization: `Bearer ${encode(authCode + ':')}`
+      Authorization: `Basic ${encode(authCode + ':')}`
     },
     body: JSON.stringify(data)
   });
