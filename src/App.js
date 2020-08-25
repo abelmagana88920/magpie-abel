@@ -21,20 +21,14 @@ import grey from "@material-ui/core/colors/grey";
 
 
 
-
-
-
-
-
-
 // const Magpie = require('magpie-js-sdk');
 // const sandbox = true;
-// const public_key = 'pk_test_jVeaJoEZt2VgIhjjKqCSDw';
-// const secret_key = 'sk_test_4vTrWGAPgahzV3HWYU2AhA';
+// const public_key = 'pk_test_sYorXrJmYCT4cAl4U6Y9Hg';
+// const secret_key = 'sk_test_65ObRyp13oxOyLvw65I2sQ';
 
 
-// const version = 'v1';
-// const magpie = new Magpie(public_key, secret_key, sandbox, version);
+// const version = 'v1.1';
+// const magpies = new Magpie(public_key, secret_key, sandbox, version);
 
 
 // const card = {
@@ -45,16 +39,17 @@ import grey from "@material-ui/core/colors/grey";
 //     cvv: '123'
 // }
 
-// magpie.token.create(card.name, card.number, card.exp_month, card.exp_year, card.cvv)
+// magpies.token.create(card.name, card.number, card.exp_month, card.exp_year, card.cvv)
 //     .then(response => {
-//         // We will actually just log response to console :)
-//         if (response.statusCode === 201) {
-//             // Success
-//             console.log(JSON.stringify(response, null, 2));
-//         } else {
-//             // Error
-//             console.log(response);
-//         }
+//       console.log('dsd', response)
+//         // // We will actually just log response to console :)
+//         // if (response.statusCode === 201) {
+//         //     // Success
+//         //     console.log(JSON.stringify(response, null, 2));
+//         // } else {
+//         //     // Error
+//         //     console.log(response);
+//         // }
 //     });
 
 
@@ -156,9 +151,6 @@ const App = () => {
 
   const handlePayment = event => {
     event.preventDefault();
-
-
-
 
     const {
       number,

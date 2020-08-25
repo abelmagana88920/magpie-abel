@@ -20,10 +20,11 @@ const postData = async (url, data, key) => {
   const response = await fetch(url, {
     method: "POST",
     headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-      Authorization: `Basic ${encode(authCode + ':')}`
+      accept: "application/json",
+      "content-type": "application/json",
+      Authorization: `Basic ${encode(authCode)}`,
     },
+    // referrerPolicy: 'no-referrer',
     body: JSON.stringify(data)
   });
 
